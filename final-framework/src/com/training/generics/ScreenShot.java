@@ -11,7 +11,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 
-
 /**
  * 
  * @author Naveen
@@ -29,7 +28,7 @@ public class ScreenShot {
 	
 	public void captureScreenShot(){
 		
-		String path = "C:\\Users\\Naveen\\Desktop\\screenshots\\";
+		String path = "C:\\Users\\NirmalaArjunan\\Music\\Java-Selenium Training\\RealEstate";
 		String fileName ="";
 
 		GregorianCalendar calendar = new GregorianCalendar(); 
@@ -56,16 +55,12 @@ public class ScreenShot {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
-		
-		
+		}	
 	}
 	
-
 	public void captureScreenShot(String fileName){
 		
-		String path =  "C:\\Users\\Naveen\\Desktop\\screenshots\\";
+		String path =  "C:\\\\Users\\\\NirmalaArjunan\\\\Music\\\\Java-Selenium Training\\\\RealEstate";
 	
 		// 1. create file 
 		// 2. capture screenshot from selenium 
@@ -85,8 +80,5 @@ public class ScreenShot {
 		
 		
 	}
-	
-	
-	
 	
 }
