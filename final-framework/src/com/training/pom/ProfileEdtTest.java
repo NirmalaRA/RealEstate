@@ -1,11 +1,13 @@
 package com.training.pom;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class ProfileEdtTest {
 		private WebDriver driver; 			
@@ -13,37 +15,7 @@ public class ProfileEdtTest {
 			this.driver = driver; 
 			PageFactory.initElements(driver, this);
 		}
-		
-		//Clicking on Login/SignIn button
-		@FindBy(xpath="//a[@class ='sign-in']")
-		private WebElement loginBtn; 
-		public void clickloginBtn() {
-			this.loginBtn.click();;
-		}
-		
-		//Entering user name
-		@FindBy(id="user_login")
-		private WebElement userName;
-		public void sendUserName(String userName) {
-			this.userName.clear(); 
-			this.userName.sendKeys(userName); 
-		}
-		
-		//Entering password
-		@FindBy(id="user_pass")
-		private WebElement passWord;	
-		public void sendPasswd(String passWord) {
-			this.passWord.clear(); 
-			this.passWord.sendKeys(passWord); 
-		}
-		
-		//Submitting login credentials
-		@FindBy(xpath="//input[@name='login']")
-		private WebElement signInBtn; 
-		public void clickSignINBtn() {
-			this.signInBtn.click();
-		}
-		
+			
 		//Moving mouse pointer to User link
 		@FindBy(xpath="//li[@id='wp-admin-bar-my-account']/a[@href='http://realestate.upskills.in/wp-admin/profile.php']")
 		private WebElement userLnk; 	
@@ -52,6 +24,18 @@ public class ProfileEdtTest {
 		act.moveToElement(userLnk).build().perform();
 		}
 		
+		//Checking options under User
+		@FindAll({
+		@FindBy(id="wp-admin-bar-user-info"),
+		@FindBy(id="wp-admin-bar-edit-profile"),
+		@FindBy(id="wp-admin-bar-logout")
+		})
+		private List<WebElement> userOptions;
+		public int verifyUserOptions() {
+			int numOfUserOptions = userOptions.size();
+			return numOfUserOptions;
+		}
+
 		//Clicking on Edit My Profile
 		@FindBy(linkText="Edit My Profile")
 		private WebElement myProfileLnk; 	
@@ -59,12 +43,29 @@ public class ProfileEdtTest {
 			this.myProfileLnk.click();
 		}
 		
+		//Confirming my profile page title
+		@FindBy(xpath="//div[@id='profile-page']//h1")
+		private WebElement profilePageTtle;
+			public String confirmMyProfilePage() {
+				this.profilePageTtle.isDisplayed();
+				String profilePageTitle = profilePageTtle.getText();
+				return profilePageTitle;
+		}
+		
+		//Confirming logged in user name
+		@FindBy(xpath="//tr[@class='user-user-login-wrap']//input[@value='admin']")
+		private WebElement confirmUserName;
+		public String confirmUserName() {
+			String userName = confirmUserName.getAttribute("value");
+			return userName;
+		}
+		
 		//Editing last name
 		@FindBy(id="last_name")
 		private WebElement lastName; 
 		public void lastNameEdt(String lastName) {
 			this.lastName.clear(); 
-			this.lastName.sendKeys(lastName); 
+			this.lastName.sendKeys(lastName);
 		}
 		
 		//Editing phone number
@@ -85,8 +86,8 @@ public class ProfileEdtTest {
 		//Checking update success message
 		@FindBy(xpath="//div[@id='message']//strong")
 		private WebElement successMsg;
-		public void verifySuccessMsg() {
-		Assert.assertEquals("Profile updated.", successMsg.getText());
-		System.out.println("LastName and PhoneNumber has been updated successfully!!");
+		public String verifySuccessMsg() {
+			String successMessage = successMsg.getText();
+			return successMessage;
 		}	
 	}

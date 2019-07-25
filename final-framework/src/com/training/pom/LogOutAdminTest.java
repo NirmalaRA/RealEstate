@@ -17,13 +17,5 @@ public class LogOutAdminTest {
 		private WebElement logOutLnk; 	
 		public void logOutLnk() {
 			this.logOutLnk.click();
-		}
-		
-		//Checking log in page after logged out from profile
-		@FindBy(xpath="//div[@class='tabs-container alt']")
-		private WebElement backToLoginPage;
-		public void backToLoginPage() {
-		backToLoginPage.isDisplayed();
-		System.out.println("You are successfully logged out!");
 		}	
 	}
