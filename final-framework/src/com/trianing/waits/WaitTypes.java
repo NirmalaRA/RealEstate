@@ -30,7 +30,7 @@ public class WaitTypes {
 	// this method will return WebElement 
 	// when on the page it is available for presence
 	// presenceOfElementLocated
-	public WebElement presenceElementLocated(By locator, int timeout){
+	public WebElement presenceElementLocated(WebDriver driver, By locator, int timeout){
 		try{
 			WebDriverWait wait = new WebDriverWait(driver, timeout);
 			WebElement element  = wait.until(
@@ -46,7 +46,7 @@ public class WaitTypes {
 	
 	// this method shall take String parameter, and assumiing that it will 
 	// only send by id 
-	public WebElement presenceElementLocated(String locator, int timeout){
+	public WebElement presenceElementLocated(WebDriver driver,String locator, int timeout){
 		try{
 			WebDriverWait wait = new WebDriverWait(driver, timeout);
 			WebElement element  = wait.until(
@@ -62,14 +62,11 @@ public class WaitTypes {
 	
 	
 	
-	public WebElement waitForElement(By locator, int timeout){
+	public static WebElement waitForElement(WebDriver driver,WebElement element, int timeout){
 		try{
 			WebDriverWait wait = new WebDriverWait(driver, timeout);
-			WebElement element  = wait.until(
-					ExpectedConditions.visibilityOfElementLocated(locator)
-					);
-			System.out.println("Element Located");
-			
+			wait.until(ExpectedConditions.visibilityOf(element));
+			//System.out.println("Element Located");			
 			return element;
 		}catch(Exception e ){
 			System.out.println("Element Not Located " + e);
@@ -78,21 +75,18 @@ public class WaitTypes {
 	}
 	
 	
-
-	public WebElement elementToBeClickable(By locator, int timeout){
+	public static WebElement elementToBeClickable(WebDriver driver, WebElement element, int timeout){
 		try{
 			WebDriverWait wait = new WebDriverWait(driver, timeout);
-			WebElement element  = wait.until(
-					ExpectedConditions.elementToBeClickable(locator)
-					);
-			System.out.println("Element Located");
-			
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			//System.out.println("Element Located");
 			return element;
 		}catch(Exception e ){
 			System.out.println("Element Not Located " + e);
 		}
 		return null;
 	}
+	
 }
 
 

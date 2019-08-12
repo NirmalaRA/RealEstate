@@ -2,52 +2,52 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="147072" started-at="2019-07-25T17:44:14Z" finished-at="2019-07-25T17:46:41Z">
+  <suite name="Default suite" duration-ms="215650" started-at="2019-08-12T13:46:58Z" finished-at="2019-08-12T13:50:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="147072" started-at="2019-07-25T17:44:14Z" finished-at="2019-07-25T17:46:41Z">
-      <class name="com.training.sanity.tests.SimpleTestCasesTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="setUpBeforeClass" is-config="true" duration-ms="28" started-at="2019-07-25T17:44:14Z" finished-at="2019-07-25T17:44:14Z">
+    <test name="Default test" duration-ms="215650" started-at="2019-08-12T13:46:58Z" finished-at="2019-08-12T13:50:34Z">
+      <class name="com.training.sanity.tests.MediumTestCases">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="setUpBeforeClass" is-config="true" duration-ms="14" started-at="2019-08-12T13:46:58Z" finished-at="2019-08-12T13:46:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="28751" started-at="2019-07-25T17:44:14Z" finished-at="2019-07-25T17:44:43Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="setUp" is-config="true" duration-ms="29071" started-at="2019-08-12T13:46:58Z" finished-at="2019-08-12T13:47:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="profileLNPNEdt()[pri:1, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="profileLNPNEdt" duration-ms="20468" started-at="2019-07-25T17:44:43Z" finished-at="2019-07-25T17:45:03Z">
+        <test-method status="PASS" signature="addNewProperty()[pri:1, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="addNewProperty" duration-ms="57447" started-at="2019-08-12T13:47:27Z" finished-at="2019-08-12T13:48:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- profileLNPNEdt -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="919" started-at="2019-07-25T17:45:03Z" finished-at="2019-07-25T17:45:04Z">
+        </test-method> <!-- addNewProperty -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="867" started-at="2019-08-12T13:48:25Z" finished-at="2019-08-12T13:48:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="31627" started-at="2019-07-25T17:45:04Z" finished-at="2019-07-25T17:45:36Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="setUp" is-config="true" duration-ms="27848" started-at="2019-08-12T13:48:26Z" finished-at="2019-08-12T13:48:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="generatePassWd()[pri:2, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="generatePassWd" duration-ms="25508" started-at="2019-07-25T17:45:36Z" finished-at="2019-07-25T17:46:01Z">
+        <test-method status="PASS" signature="addNewPropWithNewFeature()[pri:2, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="addNewPropWithNewFeature" duration-ms="29958" started-at="2019-08-12T13:48:54Z" finished-at="2019-08-12T13:49:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- generatePassWd -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="878" started-at="2019-07-25T17:46:01Z" finished-at="2019-07-25T17:46:02Z">
+        </test-method> <!-- addNewPropWithNewFeature -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="891" started-at="2019-08-12T13:49:23Z" finished-at="2019-08-12T13:49:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="22914" started-at="2019-07-25T17:46:02Z" finished-at="2019-07-25T17:46:25Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="setUp" is-config="true" duration-ms="34427" started-at="2019-08-12T13:49:24Z" finished-at="2019-08-12T13:49:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="logOutAdmin()[pri:3, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="logOutAdmin" duration-ms="15028" started-at="2019-07-25T17:46:25Z" finished-at="2019-07-25T17:46:40Z">
+        <test-method status="PASS" signature="addNewPropWithNewRegion()[pri:3, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="addNewPropWithNewRegion" duration-ms="34158" started-at="2019-08-12T13:49:59Z" finished-at="2019-08-12T13:50:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logOutAdmin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.SimpleTestCasesTest@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="912" started-at="2019-07-25T17:46:40Z" finished-at="2019-07-25T17:46:41Z">
+        </test-method> <!-- addNewPropWithNewRegion -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.MediumTestCases@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="940" started-at="2019-08-12T13:50:33Z" finished-at="2019-08-12T13:50:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.SimpleTestCasesTest -->
+      </class> <!-- com.training.sanity.tests.MediumTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -2,8 +2,12 @@ package com.training.pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import com.training.generics.GenericMethods;
+import com.trianing.waits.WaitTypes;
 
 public class RealEstateGenericMethods {
 		private WebDriver driver; 			
@@ -17,6 +21,14 @@ public class RealEstateGenericMethods {
 		private WebElement loginBtn; 
 		public void clickloginBtn() {
 			this.loginBtn.click();;
+		}
+		
+		//Moving mouse pointer to User link
+		@FindBy(xpath="//li[@id='wp-admin-bar-my-account']")
+		private WebElement userLnk; 	
+		public void clickUserLink() {
+		WaitTypes.waitForElement(driver, userLnk, 30);
+		GenericMethods.mouseOver(driver, userLnk);
 		}
 		
 		//Checking login form
